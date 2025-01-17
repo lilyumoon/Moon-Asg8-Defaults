@@ -1,7 +1,18 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Moon_Asg8_Defaults.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultCity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Rice Lake</Value>
+    </Setting>
+    <Setting Name="DefaultState" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WI</Value>
+    </Setting>
+    <Setting Name="DefaultZip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">54868</Value>
+    </Setting>
+    <Setting Name="DefaultApiKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[api key]</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

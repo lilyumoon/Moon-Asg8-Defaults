@@ -1,0 +1,131 @@
+﻿======= Lily Moon
+======= Assignment 8 - Defaults
+======= Advanced .NET
+======= Due 4/13/25
+
+
+
+======= INTENTIONS:
+
+    * Set up UI as much as possible before getting into the code
+
+    * Maintain a consistent naming scheme for controls ({controlType_ControlName}, button_AddTenant, listBox_Tenants, groupBox_Tenants, etc)
+
+    * Predetermine the scope of each development 'push'
+
+
+
+
+======= Assignment:
+
+    * Create a new project called: Lastname-Asg8-Defaults
+
+    * Create an application that will have three Forms. They must be Modal (only one at a time).
+        Name them:
+            * FormMain
+            * FormDefaults
+            * FormTenant
+
+    * In FormMain, you will have buttons:
+
+        > Defaults
+            This will display the FormDefaults, and let you save default values for your application.
+
+            * Setup your Defaults for:
+                * City
+                * State
+                * Zip
+                * API Key (we will use this later when working with SQL Server)
+
+                * Sample Code:
+
+                    // Get default value
+                    ﻿textBoxDefaultCity.Text = Properties.Settings.Default.DefaultCity;
+ 
+                    ﻿// Save default value
+                    ﻿Properties.Settings.Default.DefaultCity = textBoxDefaultCity.Text;
+                    Properties.Settings.Default.Save();    // This is the KEY, must call the .Save() Method
+
+
+            * Add the ITenant.cs Interface to your project
+
+            * Create a Tenant Class, make sure it used the ITenant interface
+                public class Tenant: ITenant
+
+        > Add:
+            Shows the FormTenant, where you could Insert a new record
+                ID, DateAdded, DateUpdated should be read only.
+
+        > Edit:
+            Shows the FormTenant where you could edit an existing record
+                ID, DateAdded, DateUpdated should be read only. 
+
+        * When Saving a Tenant, you must validate the data and ensure that FirstName, LastName, City, State, Zip are NOT blank.
+
+
+
+======= GOALS:
+
+    * Use multiple forms in an application.
+
+    * Understand Classes.
+
+    * Understand how to make use of an Interface  (ITenant.cs)
+
+    * Use Properties to set default values for a C# application.
+
+    * Understand how to add and retrieve objects from a Listbox
+
+    * Understand how to pass objects to the constructor of a Form.
+
+    * Understand how to use a Static class to simulate a database table
+
+
+
+======= VIDEO:
+    * 95 minutes: https://northwoodtech.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=992e23c4-3e62-4a2d-8765-b14d00d7262a
+
+        * covers building application framework, how to use the ITenant.cs SLSStaticDB.cs and the basic steps for the application
+
+        * NOTE: The API Key is NOT used for this part of the assignment, but will be used later.
+
+
+
+
+======= GRADING
+
+    * For full credit, the program must not crash. You must use good naming conventions.
+
+    * The Add Tenant, Edit Tenent, Defaults must all work.
+
+    * If you Don't Save when Adding a Tenant object,then a tenant object should NOT be added to the ListBox
+
+    * Change the Tenant.ToString() method to show more than the ID, FirstName, LastName
+
+    * Setting Default values should work and the application should remember the default values (City, State, Zip, API Key) when you restart the application.
+
+    * When you Add a new Tenant object, the default values for City, State and Zip, DateAdded should be pre-filled, all other fields should be blank
+
+    * When you Edit a Tenant object, DateUpdated should have been set from when it was last saved.
+
+
+
+
+
+======= FEEDBACK
+
+
+1: What did you like about the assignment?
+
+
+
+
+2: How much time did you spend on the assignment?
+
+
+
+
+3: What were the muddiest points?
+
+
+
