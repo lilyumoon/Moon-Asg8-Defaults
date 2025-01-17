@@ -52,6 +52,7 @@
             this.button_Defaults.TabIndex = 1;
             this.button_Defaults.Text = "Defaults";
             this.button_Defaults.UseVisualStyleBackColor = true;
+            this.button_Defaults.Click += new System.EventHandler(this.button_Defaults_Click);
             // 
             // button_AddTenant
             // 

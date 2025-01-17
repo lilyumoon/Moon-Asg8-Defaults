@@ -53,10 +53,38 @@ namespace Moon_Asg8_Defaults
 
         private void button_AddTenant_Click(object sender, EventArgs e)
         {
+            Tenant tenant = new Tenant();
 
+            FormTenant formTenant = new FormTenant();
+            formTenant.ShowDialog();
+
+            if (formTenant.DialogResult == DialogResult.OK)
+            {
+                SLRStaticDB.updateTenant(tenant);
+
+                loadTenantListbox();
+            }
         }
 
         private void button_EditTenant_Click(object sender, EventArgs e)
+        {
+            if (listBox_Tenant.SelectedIndex > -1)
+            {
+                Tenant tenant = (Tenant)listBox_Tenant.SelectedItem;
+
+                FormTenant formTenant = new FormTenant();
+                formTenant.ShowDialog();
+
+                if (formTenant.DialogResult == DialogResult.OK)
+                {
+                    SLRStaticDB.updateTenant(tenant);
+
+                    loadTenantListbox();
+                }
+            }
+        }
+
+        private void button_Defaults_Click(object sender, EventArgs e)
         {
 
         }

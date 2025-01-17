@@ -9,6 +9,9 @@ namespace Moon_Asg8_Defaults
     public class Tenant : ITenant
     {
 
+        /// <summary>
+        /// ID is set when Tenant is added to the database
+        /// </summary>
         public int ID { get; set; }
         public DateTime DateAdded { get; set; }
         public DateTime DateUpdated { get; set; }
@@ -23,7 +26,9 @@ namespace Moon_Asg8_Defaults
 
         public Tenant()
         {
-
+            City = Properties.Settings.Default.DefaultCity;
+            State = Properties.Settings.Default.DefaultState;
+            Zip = Properties.Settings.Default.DefaultZip;
         }
 
         public override string ToString()
