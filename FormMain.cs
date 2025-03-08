@@ -86,7 +86,13 @@ namespace Moon_Asg8_Defaults
 
         private void button_Defaults_Click(object sender, EventArgs e)
         {
+            FormDefaults formDefaults = new FormDefaults();
+            formDefaults.ShowDialog();
 
+            if (formDefaults.DialogResult == DialogResult.OK)
+            {
+                // save default settings
+            }
         }
     }
 }
