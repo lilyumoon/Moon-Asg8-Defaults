@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox_Defaults = new System.Windows.Forms.GroupBox();
-            this.textBox_City = new System.Windows.Forms.TextBox();
-            this.textBox_State = new System.Windows.Forms.TextBox();
-            this.textBox_Zip = new System.Windows.Forms.TextBox();
+            this.label_ApiKey = new System.Windows.Forms.Label();
+            this.label_Zip = new System.Windows.Forms.Label();
+            this.label_State = new System.Windows.Forms.Label();
+            this.label_City = new System.Windows.Forms.Label();
             this.textBox_ApiKey = new System.Windows.Forms.TextBox();
+            this.textBox_Zip = new System.Windows.Forms.TextBox();
+            this.textBox_State = new System.Windows.Forms.TextBox();
+            this.textBox_City = new System.Windows.Forms.TextBox();
             this.button_Cancel = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
-            this.label_City = new System.Windows.Forms.Label();
-            this.label_State = new System.Windows.Forms.Label();
-            this.label_Zip = new System.Windows.Forms.Label();
-            this.label_ApiKey = new System.Windows.Forms.Label();
             this.groupBox_Defaults.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,69 +58,14 @@
             this.groupBox_Defaults.TabIndex = 0;
             this.groupBox_Defaults.TabStop = false;
             // 
-            // textBox_City
+            // label_ApiKey
             // 
-            this.textBox_City.Location = new System.Drawing.Point(91, 32);
-            this.textBox_City.Name = "textBox_City";
-            this.textBox_City.Size = new System.Drawing.Size(200, 20);
-            this.textBox_City.TabIndex = 0;
-            // 
-            // textBox_State
-            // 
-            this.textBox_State.Location = new System.Drawing.Point(91, 78);
-            this.textBox_State.Name = "textBox_State";
-            this.textBox_State.Size = new System.Drawing.Size(200, 20);
-            this.textBox_State.TabIndex = 1;
-            // 
-            // textBox_Zip
-            // 
-            this.textBox_Zip.Location = new System.Drawing.Point(91, 125);
-            this.textBox_Zip.Name = "textBox_Zip";
-            this.textBox_Zip.Size = new System.Drawing.Size(200, 20);
-            this.textBox_Zip.TabIndex = 2;
-            // 
-            // textBox_ApiKey
-            // 
-            this.textBox_ApiKey.Location = new System.Drawing.Point(91, 175);
-            this.textBox_ApiKey.Name = "textBox_ApiKey";
-            this.textBox_ApiKey.Size = new System.Drawing.Size(200, 20);
-            this.textBox_ApiKey.TabIndex = 3;
-            // 
-            // button_Cancel
-            // 
-            this.button_Cancel.Location = new System.Drawing.Point(241, 249);
-            this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.button_Cancel.TabIndex = 14;
-            this.button_Cancel.Text = "Cancel";
-            this.button_Cancel.UseVisualStyleBackColor = true;
-            // 
-            // button_Save
-            // 
-            this.button_Save.Location = new System.Drawing.Point(160, 249);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(75, 23);
-            this.button_Save.TabIndex = 13;
-            this.button_Save.Text = "Save";
-            this.button_Save.UseVisualStyleBackColor = true;
-            // 
-            // label_City
-            // 
-            this.label_City.AutoSize = true;
-            this.label_City.Location = new System.Drawing.Point(58, 35);
-            this.label_City.Name = "label_City";
-            this.label_City.Size = new System.Drawing.Size(27, 13);
-            this.label_City.TabIndex = 4;
-            this.label_City.Text = "City:";
-            // 
-            // label_State
-            // 
-            this.label_State.AutoSize = true;
-            this.label_State.Location = new System.Drawing.Point(50, 78);
-            this.label_State.Name = "label_State";
-            this.label_State.Size = new System.Drawing.Size(35, 13);
-            this.label_State.TabIndex = 5;
-            this.label_State.Text = "State:";
+            this.label_ApiKey.AutoSize = true;
+            this.label_ApiKey.Location = new System.Drawing.Point(37, 178);
+            this.label_ApiKey.Name = "label_ApiKey";
+            this.label_ApiKey.Size = new System.Drawing.Size(48, 13);
+            this.label_ApiKey.TabIndex = 7;
+            this.label_ApiKey.Text = "API Key:";
             // 
             // label_Zip
             // 
@@ -131,14 +76,70 @@
             this.label_Zip.TabIndex = 6;
             this.label_Zip.Text = "Zip:";
             // 
-            // label_ApiKey
+            // label_State
             // 
-            this.label_ApiKey.AutoSize = true;
-            this.label_ApiKey.Location = new System.Drawing.Point(37, 178);
-            this.label_ApiKey.Name = "label_ApiKey";
-            this.label_ApiKey.Size = new System.Drawing.Size(48, 13);
-            this.label_ApiKey.TabIndex = 7;
-            this.label_ApiKey.Text = "API Key:";
+            this.label_State.AutoSize = true;
+            this.label_State.Location = new System.Drawing.Point(50, 78);
+            this.label_State.Name = "label_State";
+            this.label_State.Size = new System.Drawing.Size(35, 13);
+            this.label_State.TabIndex = 5;
+            this.label_State.Text = "State:";
+            // 
+            // label_City
+            // 
+            this.label_City.AutoSize = true;
+            this.label_City.Location = new System.Drawing.Point(58, 35);
+            this.label_City.Name = "label_City";
+            this.label_City.Size = new System.Drawing.Size(27, 13);
+            this.label_City.TabIndex = 4;
+            this.label_City.Text = "City:";
+            // 
+            // textBox_ApiKey
+            // 
+            this.textBox_ApiKey.Location = new System.Drawing.Point(91, 175);
+            this.textBox_ApiKey.Name = "textBox_ApiKey";
+            this.textBox_ApiKey.Size = new System.Drawing.Size(200, 20);
+            this.textBox_ApiKey.TabIndex = 3;
+            // 
+            // textBox_Zip
+            // 
+            this.textBox_Zip.Location = new System.Drawing.Point(91, 125);
+            this.textBox_Zip.Name = "textBox_Zip";
+            this.textBox_Zip.Size = new System.Drawing.Size(200, 20);
+            this.textBox_Zip.TabIndex = 2;
+            // 
+            // textBox_State
+            // 
+            this.textBox_State.Location = new System.Drawing.Point(91, 78);
+            this.textBox_State.Name = "textBox_State";
+            this.textBox_State.Size = new System.Drawing.Size(200, 20);
+            this.textBox_State.TabIndex = 1;
+            // 
+            // textBox_City
+            // 
+            this.textBox_City.Location = new System.Drawing.Point(91, 32);
+            this.textBox_City.Name = "textBox_City";
+            this.textBox_City.Size = new System.Drawing.Size(200, 20);
+            this.textBox_City.TabIndex = 0;
+            // 
+            // button_Cancel
+            // 
+            this.button_Cancel.Location = new System.Drawing.Point(241, 249);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.button_Cancel.TabIndex = 14;
+            this.button_Cancel.Text = "Cancel";
+            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            // 
+            // button_Save
+            // 
+            this.button_Save.Location = new System.Drawing.Point(160, 249);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(75, 23);
+            this.button_Save.TabIndex = 13;
+            this.button_Save.Text = "Save";
+            this.button_Save.UseVisualStyleBackColor = true;
             // 
             // FormDefaults
             // 

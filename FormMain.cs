@@ -40,11 +40,14 @@ namespace Moon_Asg8_Defaults
 
         private void loadTenantListbox()
         {
+            // clear any existing listbox items
             listBox_Tenant.Items.Clear();
 
+            // retrieve the list of tenants from the DB
             List<Tenant> tenants = new List<Tenant>();
             tenants = SLRStaticDB.getTenants();
 
+            // add each tenant object to the listbox as listbox items
             foreach (Tenant t in tenants)
             {
                 listBox_Tenant.Items.Add(t);
@@ -53,32 +56,40 @@ namespace Moon_Asg8_Defaults
 
         private void button_AddTenant_Click(object sender, EventArgs e)
         {
-            Tenant tenant = new Tenant();
-
+            // create a FormTenant form and show it modally
             FormTenant formTenant = new FormTenant();
             formTenant.ShowDialog();
 
+            // when FormTenant form closes, if it contains data that should be saved,
+            //  add the (new) tenant to the DB
             if (formTenant.DialogResult == DialogResult.OK)
             {
-                SLRStaticDB.updateTenant(tenant);
+                SLRStaticDB.addTenant(formTenant.Tenant);
 
+                // reload the tenant listbox because a new tenant was added to the DB
                 loadTenantListbox();
             }
         }
 
         private void button_EditTenant_Click(object sender, EventArgs e)
         {
+            // check if there is a listbox item selected
             if (listBox_Tenant.SelectedIndex > -1)
             {
+                // extract tenant object from listbox selected item
                 Tenant tenant = (Tenant)listBox_Tenant.SelectedItem;
 
-                FormTenant formTenant = new FormTenant();
+                // create a FormTenant form, feed it the tenant, and show it modally
+                FormTenant formTenant = new FormTenant(tenant);
                 formTenant.ShowDialog();
 
+                // when FormTenant form closes, if it contains data that should be saved,
+                //  update the tenant in the DB
                 if (formTenant.DialogResult == DialogResult.OK)
                 {
-                    SLRStaticDB.updateTenant(tenant);
+                    SLRStaticDB.updateTenant(formTenant.Tenant);
 
+                    // reload the tenant listbox because data may have been modified
                     loadTenantListbox();
                 }
             }

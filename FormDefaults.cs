@@ -18,8 +18,9 @@ namespace Moon_Asg8_Defaults
             InitializeComponent();
         }
 
-        private void button_Save_Click(object sender, EventArgs e)
+        private void FormDefaults_Load(object sender, EventArgs e)
         {
+            setStyles();
         }
 
         private void setStyles()
@@ -31,9 +32,14 @@ namespace Moon_Asg8_Defaults
             ThemeManager.ApplyStyle(buttons, ThemeManager.Style.AccentPrimary);
         }
 
-        private void FormDefaults_Load(object sender, EventArgs e)
+        private void button_Save_Click(object sender, EventArgs e)
         {
-            setStyles();
+
+        }
+
+        private void button_Cancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

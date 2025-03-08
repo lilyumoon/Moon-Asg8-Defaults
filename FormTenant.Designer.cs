@@ -213,6 +213,7 @@
             this.button_Save.TabIndex = 11;
             this.button_Save.Text = "Save";
             this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // button_Cancel
             // 
@@ -222,6 +223,7 @@
             this.button_Cancel.TabIndex = 12;
             this.button_Cancel.Text = "Cancel";
             this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // FormTenant
             // 

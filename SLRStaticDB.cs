@@ -38,8 +38,11 @@ namespace Moon_Asg8_Defaults  // Don't forget to change the namespace
 
         // Method to Insert a Tenant Record
         public static void addTenant(Tenant tenant)
-        {   
+        {
             tenant.ID = ++ObjectCount;
+
+            // I added this line
+            tenant.DateAdded = DateTime.Now;
             listTenant.Add(tenant);
         }
 

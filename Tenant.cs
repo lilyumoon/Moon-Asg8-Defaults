@@ -26,6 +26,7 @@ namespace Moon_Asg8_Defaults
 
         public Tenant()
         {
+            // set the default values
             City = Properties.Settings.Default.DefaultCity;
             State = Properties.Settings.Default.DefaultState;
             Zip = Properties.Settings.Default.DefaultZip;
